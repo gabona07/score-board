@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="medium_padding">10dp</dimen>
+    <dimen name="medium_margin">10dp</dimen>
+    <dimen name="team_logo_size">80dp</dimen>
+    <dimen name="team_name_padding">8dp</dimen>
+    <dimen name="date_padding">5dp</dimen>
+    <dimen name="logo_padding">5dp</dimen>
+    <dimen name="card_elevation_max">3dp</dimen>
+    <dimen name="card_elevation">2.5dp</dimen>
+    <dimen name="versus_img_size">35dp</dimen>
+    <dimen name="bottom_icon_size">25dp</dimen>
+    <dimen name="big_text">24sp</dimen>
+    <dimen name="medium_text_size">16sp</dimen>
+    <dimen name="large_margin">30dp</dimen>
+    <dimen name="large_padding">20dp</dimen>
+    <dimen name="line_spacing">2dp</dimen>
+</resources>

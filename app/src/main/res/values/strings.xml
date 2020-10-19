@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Score Board</string>
+    <string name="first_tab_text">Latest</string>
+    <string name="second_tab_text">Upcoming</string>
+    <string name="score_separator">-</string>
+    <string name="team_logo">Team Logo</string>
+    <string name="team_name_intent">TEAM_NAME</string>
+    <string name="team_details_label">Details</string>
+</resources>

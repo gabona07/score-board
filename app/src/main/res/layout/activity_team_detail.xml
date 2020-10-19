@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".view.TeamDetailActivity">
+
+    <ProgressBar
+        android:id="@+id/detail_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/details_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/error"
+        android:visibility="gone"
+        tools:ignore="ContentDescription" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/team_logo"
+                android:layout_width="@dimen/team_logo_size"
+                android:layout_height="@dimen/team_logo_size"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginBottom="@dimen/medium_margin"
+                android:contentDescription="@string/team_logo"
+                tools:src="@drawable/home_team_ph" />
+
+            <TextView
+                android:id="@+id/team_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingLeft="@dimen/large_padding"
+                android:paddingTop="@dimen/medium_padding"
+                android:paddingRight="@dimen/large_padding"
+                android:textSize="@dimen/big_text"
+                android:textStyle="bold"
+                tools:text="Liverpool" />
+
+            <TextView
+                android:id="@+id/formed_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/medium_padding"
+                android:textSize="@dimen/medium_text_size"
+                tools:text="(2001)" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:padding="@dimen/large_padding"
+                android:textSize="@dimen/medium_text_size"
+                tools:text="@tools:sample/lorem/random" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/medium_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/facebook"
+            android:layout_width="@dimen/bottom_icon_size"
+            android:layout_height="@dimen/bottom_icon_size"
+            android:background="?attr/selectableItemBackground"
+            android:onClick="openFacebook"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/instagram"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/facebook"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/instagram"
+            android:layout_width="@dimen/bottom_icon_size"
+            android:layout_height="@dimen/bottom_icon_size"
+            android:background="?attr/selectableItemBackground"
+            android:onClick="openInstagram"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/youtube"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/facebook"
+            app:srcCompat="@drawable/instagram"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/youtube"
+            android:layout_width="@dimen/bottom_icon_size"
+            android:layout_height="@dimen/bottom_icon_size"
+            android:background="?attr/selectableItemBackground"
+            android:onClick="openYoutube"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/twitter"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/instagram"
+            app:srcCompat="@drawable/youtube"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/twitter"
+            android:layout_width="@dimen/bottom_icon_size"
+            android:layout_height="@dimen/bottom_icon_size"
+            android:background="?attr/selectableItemBackground"
+            android:onClick="openTwitter"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/youtube"
+            app:srcCompat="@drawable/twitter"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
