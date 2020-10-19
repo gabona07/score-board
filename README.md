@@ -1,5 +1,5 @@
 # Score Board
-A team project by Gabriella Bona and Bendegúz Tajti
+A team project by Gabriella Bona and Bendegúz Tajti. This project shows all the data concerning recent football events.
 
 ## What have we learnt?
 
